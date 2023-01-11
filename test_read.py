@@ -8,6 +8,9 @@ import time
 
 ##change these to match your folder structure
 save_loc = "/p/home/jeh857/smartbase/grib_csvs"
+if not os.path.exists(save_loc):
+   os.makedirs(save_loc)
+
 source_loc = "/p/work/bhoch/AE6.1/hrrr"
 top_dirs = (os.listdir(source_loc))
 
