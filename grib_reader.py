@@ -1,4 +1,5 @@
 import os.path
+import os.makerdirs
 import pygrib
 import time
 import sys
@@ -10,7 +11,8 @@ import warnings
 with warnings.catch_warnings():
     warnings.simplefilter(action='ignore', category=FutureWarning)
 
-
+if not os.path.exists('grib_csvs'):
+   os.makedirs('grib_csvs')
 
 #m = folium.Map()
 grid_df = pd.DataFrame()
